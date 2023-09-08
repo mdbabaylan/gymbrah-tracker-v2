@@ -1,0 +1,5 @@
+-login form looks decent
+-create reusable modals (while waiting for api to finish/retrieve promises)
+-show/hide progress bar upon pressing login, hide the progress bar when promise returns a success/error
+
+>then replace the old login form with this login form. done. ggez
