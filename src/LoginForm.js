@@ -11,6 +11,9 @@ const LoginForm = () => {
     password: ''
   });
 
+  //progress bar state
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -41,6 +44,10 @@ const LoginForm = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log('Form submitted:', formData);
+      setIsLoading(true);
+      //api call logic, login with Axios
+
+      //
     }
   };
 
@@ -51,9 +58,9 @@ const LoginForm = () => {
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-600">User ID</label>
           <input
-            type="email"
-            name="email"
-            value={formData.email}
+            type="number"
+            name="number"
+            value={formData.number}
             onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
@@ -74,7 +81,7 @@ const LoginForm = () => {
           Login
         </button>
         {/* add tertiary logic here show/hide while api has not yet returned a promise etc */}
-        <AnimatedProgressBar/>
+        {isLoading ? <AnimatedProgressBar/> : <></>}
       </form>
     </div>
   );
