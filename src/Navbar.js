@@ -19,7 +19,7 @@ const Navbar = () => {
           GBT
         </a>
         <div className="flex space-x-4">
-          <a href="#" className="text-white">
+          <a href="/" className="text-white">
             Home
           </a>
           <a href="#" className="text-white">
