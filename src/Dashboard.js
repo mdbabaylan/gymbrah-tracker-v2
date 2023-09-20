@@ -1,6 +1,7 @@
 import FloatingButton from "./FloatingButton"
 import FloatingModal from "./FloatingModal"
 import WeightChart from "./WeightChart"
+import HistoryList from "./HistoryList"
 import React, { useState } from 'react';
 
 export default function Dashboard() {
@@ -24,7 +25,11 @@ export default function Dashboard() {
 
   <div class="ml-0">
     <WeightChart/>
-   </div>
+  </div>
+
+  <div class="">
+    <HistoryList/>
+  </div>
 
   <div class="mt-5 flex lg:ml-4 lg:mt-0">
     <span class="sm:ml-3">
